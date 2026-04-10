@@ -3,20 +3,20 @@ import { Usuario } from './usuario.entity';
 
 @Entity('Mensagem')
 export class Mensagem {
-  @PrimaryGeneratedColumn({ name: 'Id' })
-  id: number;
+  @PrimaryGeneratedColumn("uuid", { name: 'Id' })
+  id: string;
 
   @Column({ name: 'Mensagem', type: 'varchar' })
   mensagem: string;
 
-  @Column({ name: 'IdRemetente', type: 'integer' })
-  idRemetente: number;
+  @Column({ name: 'IdRemetente', type: 'uuid' })
+  idRemetente: string;
 
-  @Column({ name: 'IdDestinatario', type: 'integer' })
-  idDestinatario: number;
+  @Column({ name: 'IdDestinatario', type: 'uuid' })
+  idDestinatario: string;
 
-  @Column({ name: 'IdVeiculo', type: 'integer' })
-  idVeiculo: number;
+  @Column({ name: 'IdVeiculo', type: 'uuid' })
+  idVeiculo: string;
 
   @Column({ name: 'CriadoEm', type: 'timestamp' })
   criadoEm: Date;

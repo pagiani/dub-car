@@ -2,11 +2,11 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('Imagem')
 export class Imagem {
-  @PrimaryGeneratedColumn({ name: 'Id' })
-  id: number;
+  @PrimaryGeneratedColumn("uuid", { name: 'Id' })
+  id: string;
 
-  @Column({ name: 'IdVeiculo', type: 'integer' })
-  idVeiculo: number;
+  @Column({ name: 'IdVeiculo', type: 'uuid' })
+  idVeiculo: string;
 
   @Column({ name: 'Conteudo', type: 'bytea' })
   conteudo: Buffer;

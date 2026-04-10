@@ -2,14 +2,14 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('Veiculo')
 export class Veiculo {
-  @PrimaryGeneratedColumn({ name: 'Id' })
-  id: number;
+  @PrimaryGeneratedColumn("uuid", { name: 'Id' })
+  id: string;
 
-  @Column({ name: 'IdComprador', type: 'integer', nullable: true })
-  idComprador?: number;
+  @Column({ name: 'IdComprador', type: 'uuid', nullable: true })
+  idComprador?: string;
 
-  @Column({ name: 'IdVendedor', type: 'integer' })
-  idVendedor: number;
+  @Column({ name: 'IdVendedor', type: 'uuid' })
+  idVendedor: string;
 
   @Column({ name: 'Valor', type: 'decimal' })
   valor: number;
